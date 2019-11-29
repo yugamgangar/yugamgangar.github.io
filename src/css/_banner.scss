@@ -1,0 +1,59 @@
+@import './variables';
+
+.banner-area {
+  background: transparent;
+  z-index: 0;
+
+  .parallax-background{
+    height: 100%;
+    width: 100%;
+    display: block;
+    top: 0px !important;
+    left: 0px !important;
+    margin: 0px;
+    padding: 0px;
+    position: fixed;
+    background-attachment: fixed;
+    background: url('../assets/banner-background.svg');
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    background-position: center;
+    z-index: -1;
+  }
+}
+
+.banner-area .fullscreen {
+  height: 750px;
+}
+
+.banner-left {
+  .banner-name {
+    font-size: 3rem;
+  }
+  .role-text {
+    font-size: 1.5rem;
+  }
+  h5 {
+  font-weight: 400;
+  letter-spacing: 2px;
+  }
+  #typed {
+    color: $secondaryFontColorDark;
+  }
+}
+
+.banner-right {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 991px) {
+  .banner-left {
+    .banner-name{
+      font-size: 2rem;
+    }
+    .role-text {
+      font-size: 1.25rem;
+    }
+  }
+}

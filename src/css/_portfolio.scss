@@ -1,0 +1,119 @@
+@import './variables';
+
+.portfolio-section{
+  background: radial-gradient($secondaryBackgroundColorDark , $primaryBackgroundColorDark);
+ // background: #e4a981;
+  padding: 7em 0em !important;
+  min-height: 100%;
+  transition: all ease-in 300ms;
+
+  .portfolio-head{
+    @include section-head;
+    left: -31rem;
+    top: 12rem;
+  }
+
+  ul{
+    list-style-type: none !important;
+
+   li{
+     padding: .25rem;
+     color: $primaryFontColorDark;
+     cursor: pointer;
+     transition: all ease-in 200ms;
+
+     &:nth-child(even){
+       border-left: none;
+       border-right: none;
+     }
+
+     &.active{
+       color: $secondaryFontColorDark !important;
+       font-weight: 800;
+     }
+     &:hover{
+      color: $secondaryFontColorDark !important;
+    }
+   }
+  }
+
+ .pf-card{
+   margin: 1rem;
+   border-radius: .5rem;
+   box-shadow: 0rem 0.5rem 1rem 0rem rgba(236, 249, 255, 0.3);
+   background-size: cover;
+   background-position: center;
+   transition: all ease-in-out 300ms;
+   min-height: 25vh;
+   padding: 0px;
+   color: #fff !important;
+   cursor: pointer;
+
+   &#reverberate{
+     background-image: url('../assets/reverberate-preview.png');
+   }
+   &#procure_infinity{
+     background-image: url('../assets/procure_infinity-preview.png');
+     background-repeat: no-repeat;
+     background-color: rgb(253, 243, 243);
+   }
+   &#qms{
+     background-image: url('../assets/qms-preview.png');
+   }
+   &#mahi{
+     background-image: url('../assets/mahi-preview.png');
+   }
+   &#catalog{
+     background-image: url('../assets/catalog-preview.png');
+   }
+   &#poster{
+     background-image: url('../assets/poster-preview.png');
+   }
+   &#quare{
+     background-image: url('../assets/quare-preview.png');
+     background-size: contain;
+     background-repeat: no-repeat;
+     background-color: #fff;
+   }
+   &#insight{
+     background-image: url('../assets/insight-preview.jpg');
+     background-size: contain;
+     background-repeat: no-repeat;
+     background-color: #fff;
+   }
+
+   div{
+     background-color: rgba(236, 149, 64, 0.8);
+     padding: 0rem;
+     height: 0px;
+     width: 100% !important;
+     overflow: hidden;
+     transition: all ease-in-out 300ms;
+
+     p{
+       font-size: 1.3rem;
+     }
+   }
+
+   &:hover{
+     box-shadow: 0rem 0.5rem 1rem 0rem rgba(0, 0, 0, 0.3);
+     transform: scale(1.05);
+     div{
+       padding: 0.5rem;
+       height: 100%;
+     }
+   }
+ }
+
+ .portfolio-gallery{
+  transition: all ease-in-out 400ms;
+}
+
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1024px) and (orientation:portrait){
+ .pf-card{
+   min-height: 15vh !important;
+ }
+}
+
