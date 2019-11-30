@@ -1,0 +1,58 @@
+$primaryFontColorDark : #f1f1f1;
+$secondaryFontColorDark : #EC9540;
+$primaryFontColorLight : #010101;
+$secondaryFontColorLight : rgb(235, 131, 28);
+
+
+$primaryLinkColor : #fad178;
+$secondaryLinkColor : rgb(185, 105, 24);
+
+$primaryBackgroundColorDark : #080d25;
+$secondaryBackgroundColorDark : #282E43;
+$primaryBackgroundColorLight : #f1f1f1;
+$secondaryBackgroundColorLight : #b1b1b1;
+
+$primaryFont: 'Poppins', sans-serif;
+$secondaryFont: 'Open Sans', sans-serif;
+$monteserrat: 'Montserrat', sans-serif;
+
+@mixin big-icon{
+  width: 50px !important;
+  height: 50px !important;
+  background: linear-gradient(to left, #d37e3c , #E4A981);
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  -ms-border-radius: 50% !important;
+  border-radius: 50% !important;
+}
+
+@mixin section-head{
+  position: absolute !important;
+  font-size: 6.5rem !important;
+  transform: rotate(270deg) !important;
+  font-weight: 800 !important;
+  opacity: 0.6 !important;
+  color: #303551 !important;
+  font-family: $monteserrat !important;
+
+  @media only screen and (max-width: 768px) and (orientation:portrait){
+    transform: rotate(0deg) !important;
+    left: 1rem !important;
+    top: -6rem !important;
+    font-size: 3rem !important;
+  }
+  
+  @media only screen and (min-width: 481px) and (max-width: 1024px) and (orientation:portrait){
+    transform: rotate(0deg) !important;
+    left: 0rem !important;
+    top: -6rem !important;
+    font-size: 3rem !important;
+  }
+}
+
+@mixin header-socialLinks{
+  font-size: 1.5em;
+  transition:  0.4s;
+  margin: 0px 10px;
+  color: $secondaryFontColorDark !important;
+}

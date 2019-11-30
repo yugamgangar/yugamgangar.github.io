@@ -1,0 +1,143 @@
+@import './variables';
+
+ .resume-section {
+  padding: 7em 0;
+  position: relative;
+  background: $primaryBackgroundColorDark;
+
+  .resume-head{
+    @include section-head;
+    top: 7rem;
+    left: -25rem;
+  }
+
+  h2{
+    color: $primaryFontColorDark;
+  }
+
+  .icon{
+    color: $primaryFontColorDark;
+    padding: 4px;
+  }
+}
+@media (max-width: 767.98px) {
+  .resume-section {
+    padding: 6em 0;
+  }
+}
+
+#navi {
+  top: 180px;
+  position: -webkit-sticky;
+  position: sticky;
+  margin: 0;
+}
+#navi ul {
+  margin: 0;
+  padding: 0;
+}
+#navi li {
+  font-weight: 700;
+  list-style: none;
+  margin-bottom: 10px;
+}
+#navi li a {
+  color: $primaryFontColorDark;
+}
+#navi li a.current {
+  color: #3e64ff;
+  margin-left: 20px;
+  position: relative;
+}
+#navi li a.current:after {
+  position: absolute;
+  top: 50%;
+  left: -24px;
+  width: 20px;
+  height: 2px;
+  content: "";
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background: $secondaryFontColorDark;
+}
+
+.page {
+  width: 100%;
+  margin-bottom: 7em;
+  color: whitesmoke;
+}
+.page.four {
+  margin-bottom: 0;
+}
+.page .heading {
+  font-weight: 800;
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: $secondaryFontColorDark;
+}
+
+.resume-wrap {
+  width: 100%;
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 10px;
+}
+
+.resume-wrap .icon {
+  @include big-icon
+}
+
+.resume-wrap .icon span {
+  color: #fff;
+  font-size: 28px;
+}
+.resume-wrap .text {
+  width: calc(100% - 50px);
+}
+.resume-wrap .date {
+  font-weight: 700;
+  font-size: 16px;
+  color: $secondaryFontColorDark;
+}
+.resume-wrap h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+.resume-wrap .position {
+  font-size: 18px;
+  font-weight: 700;
+  color: $primaryFontColorDark;
+}
+
+.progress-bar{
+  background: linear-gradient(to left, #d37e3c , #E4A981) !important;
+}
+
+.resume-link{
+  cursor: pointer !important;
+}
+
+.download-resume{
+  cursor: pointer;
+  font-weight: 400;
+  color: $secondaryFontColorDark !important;
+  transition: all ease-in 200ms;
+
+  &::after {
+    content: ""; 
+    display: block;
+    width: 5%;
+    border-top: 1px solid $secondaryFontColorDark;
+    transition: .5s;
+}
+
+  &:hover{
+    color: $primaryFontColorDark !important;
+  }
+
+  &:hover::after{
+    width: 50%;
+    border-color: $primaryFontColorDark;
+  }
+}
