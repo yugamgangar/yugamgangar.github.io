@@ -1050,8 +1050,19 @@
   font-weight: 600;
 }
 
-.project-description, .project-stack {
+.project-description,
+.project-stack {
   font-size: 1.2rem;
+}
+
+.portfolio-header-logo {
+  height: 4rem;
+}
+
+@media screen and (max-width: 767px) {
+  .portfolio-header-logo {
+    height: 3rem;
+  }
 }
 
 body {
