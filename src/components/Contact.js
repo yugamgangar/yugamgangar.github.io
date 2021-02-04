@@ -12,7 +12,7 @@ const Contact = () => {
           <Row>
             <Col lg='6' md='6' sm='12' className='image-section' >
               <p className='contact-head m-0 p-0'>CONTACT</p>
-              <img className='img-fluid' src={require('../assets/contact-subject.png')} alt='Contact Me' />
+              {/* <img className='img-fluid' src={require('../assets/contact-subject.png')} alt='Contact Me' /> */}
             </Col>
             <Col className='contact-left'>
               <p> Let's do something amazing.</p>

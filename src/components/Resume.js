@@ -85,6 +85,15 @@ const Resume = () => {
                   <MdDevices className='icon' />
                 </div>
                 <div className='text pl-3'>
+                  <span className='date'>December 2019 - Present</span>
+                  <h2>Full Stack Engineer</h2>
+                  <span className='position'>CareerNinja</span>
+                  <p className='text-justify'>
+                    Contributing in building functionality rich MERN stack based ed-tech platform from scratch.
+                    Contributing in design, business and development aspects of product to enhance the product usability, core functionalities and user engagement.
+                  </p>
+                </div>
+                <div className='text pl-3'>
                   <span className='date'>July 2019 - September 2019</span>
                   <h2>Full Stack Developer Intern</h2>
                   <span className='position'>Edunomics Tech Solutions</span>
@@ -166,38 +175,44 @@ const Resume = () => {
               <div className='row'>
                 <div className='col-md-6'>
                   <div className='progress-wrap'>
-                    <h4>HTML 5</h4>
-                    {progressInstance(100)}
+                    <h4>HTML5</h4>
+                    {progressInstance(95)}
                   </div>
                 </div>
                 <div className='col-md-6 animate-box'>
                   <div className='progress-wrap'>
-                    <h3>jQuery</h3>
-                    {progressInstance(60)}
-                  </div>
-                </div>
-                <div className='col-md-6 animate-box'>
-                  <div className='progress-wrap'>
-                    <h3>HTML5</h3>
-                    {progressInstance(100)}
-                  </div>
-                </div>
-                <div className='col-md-6 animate-box'>
-                  <div className='progress-wrap'>
-                    <h3>CSS3</h3>
+                    <h3>Javascript</h3>
                     {progressInstance(90)}
                   </div>
                 </div>
                 <div className='col-md-6 animate-box'>
                   <div className='progress-wrap'>
-                    <h3>WordPress</h3>
-                    {progressInstance(10)}
+                    <h3>React JS</h3>
+                    {progressInstance(85)}
                   </div>
                 </div>
                 <div className='col-md-6 animate-box'>
                   <div className='progress-wrap'>
-                    <h3>SEO</h3>
-                    {progressInstance(40)}
+                    <h3>CSS3</h3>
+                    {progressInstance(95)}
+                  </div>
+                </div>
+                <div className='col-md-6 animate-box'>
+                  <div className='progress-wrap'>
+                    <h3>Node JS</h3>
+                    {progressInstance(80)}
+                  </div>
+                </div>
+                <div className='col-md-6 animate-box'>
+                  <div className='progress-wrap'>
+                    <h3>Python</h3>
+                    {progressInstance(60)}
+                  </div>
+                </div>
+                <div className='col-md-6 animate-box'>
+                  <div className='progress-wrap'>
+                    <h3>MongoDB</h3>
+                    {progressInstance(90)}
                   </div>
                 </div>
               </div>
