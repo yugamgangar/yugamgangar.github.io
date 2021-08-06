@@ -32,6 +32,6 @@ jobs:
 
       - name: Deploy
         uses: actions/checkout@v2
-        with: 
-          BRANCH: master
-          FOLDER: dist
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
