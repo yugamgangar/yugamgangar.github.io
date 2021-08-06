@@ -1,0 +1,11 @@
+@import "./variables";
+
+.footer-section {
+  background: linear-gradient(to top left, $primaryBackgroundColorDark, rgba(8, 13, 57, 0.6));
+  padding: 1rem;
+
+  span {
+    float: right;
+    margin-left: auto;
+  }
+}

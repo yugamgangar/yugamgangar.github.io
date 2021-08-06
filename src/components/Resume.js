@@ -1,15 +1,13 @@
 import React from 'react'
-import '../css/style.css'
+import '../css/resume.scss'
 import { MdDevices, MdSchool } from 'react-icons/md'
 import { FaChalkboardTeacher, FaSchool } from 'react-icons/fa'
 import { AiOutlineFileSearch } from 'react-icons/ai'
 import { Link } from 'react-scroll'
-import { ProgressBar, Nav } from 'react-bootstrap'
+import { Nav } from 'react-bootstrap'
+import StarRatings from 'react-star-ratings';
 
 const Resume = () => {
-  const progressInstance = now => {
-    return <ProgressBar max='100' now={now} label={`${now}%`} />
-  }
 
   return (
     <section className='resume-section goto-here' id='resume-section' name='resumepage-section'>
@@ -88,24 +86,44 @@ const Resume = () => {
                   <span className='date'>December 2019 - Present</span>
                   <h2>Full Stack Engineer</h2>
                   <span className='position'>CareerNinja</span>
-                  <p className='text-justify'>
-                    Contributing in building functionality rich MERN stack based ed-tech platform from scratch.
-                    Contributing in design, business and development aspects of product to enhance the product usability, core functionalities and user engagement.
-                  </p>
+                  <ul>
+                    <li>
+                      <p className='text-left'>
+                        Responsible for building and managing the frontend of main app and all supportive apps from scratch catering ~40k+ new users each year with a team of 4 developers.
+                    </p>
+                    </li>
+                    <li>
+                      <p className='text-left'>
+                        Experienced a product journey from 0 to 1.
+                    </p>
+                    </li>
+                    <li>
+                      <p className='text-left'>
+                        Worked on end to end implementation (Design, Development and Architect)
+                        of various systems for better personalisation and content recommendations.
+                    </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className='resume-wrap d-flex'>
+                <div className='icon d-flex align-items-center justify-content-center'>
+                  <MdDevices className='icon' />
                 </div>
                 <div className='text pl-3'>
                   <span className='date'>July 2019 - September 2019</span>
                   <h2>Full Stack Developer Intern</h2>
                   <span className='position'>Edunomics Tech Solutions</span>
-                  <p className='text-justify'>
-                    Worked on SASS based web application projects development
-                    for serving client needs. Closely worked on the phases of
-                    project requirements analyzing, software designing, &amp;
-                    development of SDLC. Developed some android applications for
-                    IOT based systems of clients according to business needs.
+                  <p className='text-left'>
+                    Contributed in development of ReactJS based quality management app used by all employees of the one of India's biggest readymix concrete company RDC Concrete with team of 3 developers.
+                    </p>
+                  <p className='text-left'>
+                    Closely worked on the phases of project requirements analyzing, software designing, &amp; development of SDLC.
                   </p>
                 </div>
               </div>
+
               <div className='resume-wrap d-flex'>
                 <div className='icon d-flex align-items-center justify-content-center'>
                   <FaChalkboardTeacher className='icon' />
@@ -114,12 +132,12 @@ const Resume = () => {
                   <span className='date'>June 2017 – July 2018</span>
                   <h2>Programme Leader &amp; Co-founder</h2>
                   <span className='position'>Initiative Akanksha</span>
-                  <p className='text-justify'>
-                    “Akanksha” is an initiative taken up by a group of students
-                    from Narsee Monjee College in the year 2017. The project is
-                    about developing resources that seek to bridge the digital
-                    divide and transform information-dark communities into
-                    information-empowered communities.
+                  <p className='text-left'>
+                    “Akanksha” is an initiative about developing resources that seek to bridge the digital divide and transform information-dark communities into informationempowered communities.
+                  </p>
+                  <p className='text-left'>
+                    Actively worked on Lab setup, Marketing and Course design vertical from
+                    planning to execution.
                   </p>
                 </div>
               </div>
@@ -175,45 +193,107 @@ const Resume = () => {
               <div className='row'>
                 <div className='col-md-6'>
                   <div className='progress-wrap'>
-                    <h4>HTML5</h4>
-                    {progressInstance(95)}
+                    <h4>Javascript</h4>
+                    <StarRatings
+                      rating={5}
+                      starRatedColor="rgba(255,204,29)"
+                      numberOfStars={5}
+                      name='rating'
+                      starDimension='24px'
+                    />
                   </div>
+                  <br />
                 </div>
                 <div className='col-md-6 animate-box'>
                   <div className='progress-wrap'>
-                    <h3>Javascript</h3>
-                    {progressInstance(90)}
+                    <h3>React JS / Redux</h3>
+                    <StarRatings
+                      rating={5}
+                      starRatedColor="rgba(255,204,29)"
+                      numberOfStars={5}
+                      name='rating'
+                      starDimension='24px'
+                    />
                   </div>
+                  <br />
                 </div>
                 <div className='col-md-6 animate-box'>
                   <div className='progress-wrap'>
-                    <h3>React JS</h3>
-                    {progressInstance(85)}
+                    <h3>CSS / SCSS</h3>
+                    <StarRatings
+                      rating={5}
+                      starRatedColor="rgba(255,204,29)"
+                      numberOfStars={5}
+                      name='rating'
+                      starDimension='24px'
+                    />
                   </div>
+                  <br />
                 </div>
                 <div className='col-md-6 animate-box'>
                   <div className='progress-wrap'>
-                    <h3>CSS3</h3>
-                    {progressInstance(95)}
+                    <h3>Node JS / Express JS</h3>
+                    <StarRatings
+                      rating={4}
+                      starRatedColor="rgba(255,204,29)"
+                      numberOfStars={5}
+                      name='rating'
+                      starDimension='24px'
+                    />
                   </div>
-                </div>
-                <div className='col-md-6 animate-box'>
-                  <div className='progress-wrap'>
-                    <h3>Node JS</h3>
-                    {progressInstance(80)}
-                  </div>
-                </div>
-                <div className='col-md-6 animate-box'>
-                  <div className='progress-wrap'>
-                    <h3>Python</h3>
-                    {progressInstance(60)}
-                  </div>
+                  <br />
                 </div>
                 <div className='col-md-6 animate-box'>
                   <div className='progress-wrap'>
                     <h3>MongoDB</h3>
-                    {progressInstance(90)}
+                    <StarRatings
+                      rating={4}
+                      starRatedColor="rgba(255,204,29)"
+                      numberOfStars={5}
+                      name='rating'
+                      starDimension='24px'
+                    />
                   </div>
+                  <br />
+                </div>
+                <div className='col-md-6 animate-box'>
+                  <div className='progress-wrap'>
+                    <h3>Java / C++</h3>
+                    <StarRatings
+                      rating={3}
+                      starRatedColor="rgba(255,204,29)"
+                      numberOfStars={5}
+                      name='rating'
+                      starDimension='24px'
+                    />
+                  </div>
+                  <br />
+                </div>
+                <div className='col-md-6 animate-box'>
+                  <div className='progress-wrap'>
+                    <h3>UI Design</h3>
+                    <StarRatings
+                      rating={3}
+                      starRatedColor="rgba(255,204,29)"
+                      numberOfStars={5}
+                      name='rating'
+                      starDimension='24px'
+                    />
+                  </div>
+                  <br />
+                </div>
+                <div className='col-md-6 animate-box'>
+                  <div className='progress-wrap'>
+                    <h3>UX Design</h3>
+                    <StarRatings
+                      rating={3}
+                      starRatedColor="rgba(255,204,29)"
+                      numberOfStars={5}
+                      name='rating'
+                      starDimension='24px'
+                    />
+                  </div>
+                  <br />
                 </div>
               </div>
             </div>
@@ -230,7 +310,7 @@ const Resume = () => {
                     Published under Indian Academicians and Researcher’s
                     Association
                   </span>
-                  <p className='text-justify'>
+                  <p className='text-left'>
                     Published a short research paper at SIES College, Mumbai in
                     International Journal of Advance and Innovative Research
                     Volume 6. The paper was on an innovative conceptual product

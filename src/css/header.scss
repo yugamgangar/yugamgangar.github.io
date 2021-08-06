@@ -1,6 +1,6 @@
-@import './variables';
+@import "./variables";
 
-#headerContainer{
+#headerContainer {
   background: transparent !important;
   position: fixed;
   top: 0px !important;
@@ -9,43 +9,49 @@
   z-index: 2 !important;
   transition: all 500ms ease-in-out;
 
-  &.fixed{
-
-    .header-transition{
+  &.fixed {
+    .header-transition {
       opacity: 1;
     }
-    .navbar-link, .navbar-sociallink{
+    .navbar-link,
+    .navbar-sociallink {
       color: $primaryFontColorDark !important;
     }
-    .navbar-link::after{
+    .navbar-link::after {
       border-color: $primaryFontColorDark !important;
     }
-    .navbar-link:hover{
+    .navbar-link:hover {
       color: $secondaryFontColorDark !important;
     }
-    .navbar-link:hover::after{
+    .navbar-link:hover::after {
       border-color: $secondaryFontColorDark !important;
     }
-    .email:hover{
-      color: #DB4439 !important;
+    .email:hover {
+      color: #db4439 !important;
     }
-    .linkedin:hover{
-      color: #0077B5 !important;
+    .linkedin:hover {
+      color: #0077b5 !important;
     }
-    .twitter:hover{
-      color: #1DA1F2 !important;
+    .twitter:hover {
+      color: #1da1f2 !important;
     }
-    .git:hover{
+    .git:hover {
       color: #000 !important;
     }
-
   }
 }
 
-.header-transition{
+.header-transition {
   height: 100% !important;
   width: 100vw !important;
-  background: linear-gradient(to right, #1F1A27 , $secondaryFontColorDark);
+  // background: linear-gradient(to right, #1F1A27 , $secondaryFontColorDark);
+  // background: linear-gradient(to right, $primaryBackgroundColorDark, rgba($secondaryFontColorDark, 0.7));
+  background: rgba($secondaryBackgroundColorDark, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.27);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border-radius: 10px;
+  // border: 1px solid rgba(255, 255, 255, 0.18);
   position: absolute;
   opacity: 0;
   top: 0px !important;
@@ -54,54 +60,55 @@
 
 .navbar-link {
   color: $secondaryFontColorDark !important;
-  padding-right:.5rem;
-  padding-left:.5rem;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
   cursor: pointer;
-  
-  &::after{
-    content: ""; 
+  font-weight: 500;
+  font-size: 18px;
+
+  &::after {
+    content: "";
     display: block;
     width: 10%;
     border-top: 1px solid $secondaryFontColorDark;
-    transition: .5s;
+    transition: 0.5s;
   }
 
-  &:hover{
+  &:hover {
     color: $primaryFontColorDark !important;
   }
 
-  &:hover::after{
+  &:hover::after {
     width: 60%;
     border-color: $primaryFontColorDark;
   }
-  
-  &.active{
+
+  &.active {
     color: $primaryFontColorDark !important;
   }
 
-  &.active::after{
+  &.active::after {
     width: 90%;
     border-color: $primaryFontColorDark;
   }
-
 }
 
-.navbar-sociallink{
+.navbar-sociallink {
   @include header-socialLinks;
 
-  &:hover{
+  &:hover {
     color: $primaryFontColorDark !important;
   }
 }
 
-.email:hover{
-  color: #DB4439 !important;
+.email:hover {
+  color: #db4439 !important;
 }
-.linkedin:hover{
-  color: #0077B5 !important;
+.linkedin:hover {
+  color: #0077b5 !important;
 }
-.twitter:hover{
-  color: #1DA1F2 !important;
+.twitter:hover {
+  color: #1da1f2 !important;
 }
 
 .my-tooltip > .tooltip-inner {
@@ -132,9 +139,9 @@
 }
 
 /*      ====  MOBILE  ====      */
-#sidenavContainer{
-  width: '0vw';
-  height: '100vh';
+#sidenavContainer {
+  width: "0vw";
+  height: "100vh";
   z-index: 2;
   background: #000000;
   opacity: 0.6;
@@ -161,7 +168,7 @@
   transition: 0.3s;
 }
 
-.sidenav-link.active{
+.sidenav-link.active {
   color: $secondaryFontColorDark;
 }
 
@@ -177,7 +184,7 @@
   font-size: 1.2rem;
 }
 
-#mobileHeader{
+#mobileHeader {
   z-index: 2;
   height: 2.25rem;
   position: -webkit-sticky;
@@ -185,7 +192,7 @@
   transition: 0.3s;
   overflow: hidden;
 
-  div#pageup-btn{
+  div#pageup-btn {
     position: fixed !important;
     right: 1.5rem;
     bottom: 4.5rem;
@@ -194,69 +201,73 @@
     display: block;
     font-size: 1.4rem;
     font-weight: 600;
-    padding: .25rem;
-    box-shadow: 2px 4px 8px 2px rgba(0,0,0,0.2);
+    padding: 0.25rem;
+    box-shadow: 2px 4px 8px 2px rgba(0, 0, 0, 0.2);
     opacity: 0;
     transition: 5s;
 
-    &.show{
+    &.show {
       opacity: 0.8;
       visibility: visible;
     }
   }
 }
 
-.openbtn{
+.openbtn {
   color: $primaryFontColorDark;
   font-size: 20px;
 }
 
-.mobileMenu-btn{
+.mobileMenu-btn {
   background: #222;
   float: right !important;
   height: 100%;
   width: 2.5rem;
 }
 
-.mobile-toast{
+.mobile-toast {
   background-color: #d8f5bb !important;
   color: #000 !important;
 
-  & > i{
+  & > i {
     opacity: 0;
   }
 }
 
-@media only screen and (min-width: 481px) and (max-width: 1024px) and (orientation:portrait){
-  .navbar-sociallink{
+@media only screen and (min-width: 481px) and (max-width: 1024px) and (orientation: portrait) {
+  .navbar-sociallink {
     padding-right: 0rem !important;
     padding-left: 0rem !important;
   }
 }
 
 @media screen and (max-height: 450px) {
-  .sidenav {  padding-top: 15px;  }
-  .sidenav a {  font-size: 18px;  }
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
 }
 
-@media screen and (max-width: 767px){
-  #headerContainer.fixed{
-    .header-transition{
+@media screen and (max-width: 767px) {
+  #headerContainer.fixed {
+    .header-transition {
       opacity: 0;
     }
   }
-  .mobile-sociallink{
+  .mobile-sociallink {
     @include header-socialLinks;
     position: absolute;
     padding: 0rem !important;
 
-    &.git{
+    &.git {
       margin-left: 3.5rem;
     }
-    &.linkedin{
+    &.linkedin {
       margin-left: 6.5rem;
     }
-    &.twitter{
+    &.twitter {
       margin-left: 9.5rem;
     }
   }

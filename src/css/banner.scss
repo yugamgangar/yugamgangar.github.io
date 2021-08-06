@@ -1,10 +1,11 @@
-@import './variables';
+@import "./variables";
 
 .banner-area {
   background: transparent;
   z-index: 0;
+  min-height: 100vh;
 
-  .parallax-background{
+  .parallax-background {
     height: 100%;
     width: 100%;
     display: block;
@@ -14,7 +15,7 @@
     padding: 0px;
     position: fixed;
     background-attachment: fixed;
-    background: url('../assets/banner-background.svg');
+    background: url("../assets/banner-background.svg");
     background-repeat: no-repeat;
     background-size: cover !important;
     background-position: center;
@@ -28,14 +29,14 @@
 
 .banner-left {
   .banner-name {
-    font-size: 3rem;
+    font-size: 4rem;
   }
   .role-text {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
   h5 {
-  font-weight: 400;
-  letter-spacing: 2px;
+    font-weight: 400;
+    letter-spacing: 2px;
   }
   #typed {
     color: $secondaryFontColorDark;
@@ -49,7 +50,7 @@
 
 @media (max-width: 991px) {
   .banner-left {
-    .banner-name{
+    .banner-name {
       font-size: 2rem;
     }
     .role-text {

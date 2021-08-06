@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700');
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,800&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Leckerli+One&display=swap');
-@import './header', './banner', './about', './resume', './portfolio', './contact', './variables', './footer', './portfolioDetail';
-
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700,800&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Leckerli+One&display=swap");
+@import "./variables";
 
 body {
   font-family: $primaryFont !important;
@@ -44,6 +43,12 @@ a:hover {
   outline: 0;
 }
 
-.App{
+.container {
+  @media (min-width: 1200px) {
+    max-width: 70%;
+  }
+}
+
+.App {
   position: relative;
 }

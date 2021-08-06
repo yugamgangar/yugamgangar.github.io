@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { Navbar, Nav, Tooltip, OverlayTrigger } from 'react-bootstrap'
-import '../css/style.css'
+import '../css/style.scss'
+import '../css/header.scss'
 import { AiOutlineMenu, AiOutlineClose, AiOutlineGithub, AiOutlineLinkedin, AiOutlineTwitter } from 'react-icons/ai'
 import { IoIosMailUnread, IoIosArrowUp } from 'react-icons/io'
 import { Link, animateScroll as scroll } from 'react-scroll'
@@ -67,7 +68,7 @@ const Header = props => {
     })
     const x = new ClipboardJS('.email')
     demo(x)
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [props.windowWidth])
 
   const tooltip = () => { return <Tooltip className='my-tooltip' id='my-tooltip' ref={emailTooltip}>{emailTooltipText}</Tooltip> }

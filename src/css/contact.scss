@@ -1,0 +1,126 @@
+@import "./variables";
+
+.contact-section {
+  min-height: 75vh;
+  padding: 7em 0em 0em 0em !important;
+  background: linear-gradient(to bottom right, $primaryBackgroundColorDark, rgba(8, 13, 57, 0.6));
+
+  .contact-lower-container {
+    background: linear-gradient(to bottom, $primaryBackgroundColorDark, $secondaryFontColorDark);
+    padding: 4rem 0rem 6rem 0rem;
+
+    .contact-btn {
+      background: $secondaryFontColorDark !important;
+      color: $primaryFontColorDark !important;
+      border-color: $primaryFontColorDark !important;
+      transition: all 400ms;
+      width: 6rem;
+    }
+    .contact-btn:hover {
+      background: $primaryFontColorDark !important;
+      color: $secondaryFontColorDark !important;
+    }
+  }
+
+  span {
+    font-size: 1.1rem;
+  }
+
+  p {
+    font-size: 1.3rem;
+    margin: 1rem 0rem;
+  }
+}
+
+.contact-icon-container {
+  @include big-icon;
+
+  &#linkedin {
+    background: linear-gradient(to top left, #0077b5, rgba(245, 241, 241, 0.4)) !important;
+  }
+
+  &#twitter {
+    background: linear-gradient(to top left, #1da1f2, rgba(245, 241, 241, 0.4)) !important;
+  }
+
+  &#gmail {
+    background: linear-gradient(to top left, #db4439, rgba(219, 68, 57, 0.4)) !important;
+  }
+
+  .icon {
+    font-size: 1.6rem !important;
+  }
+}
+
+.contact-head {
+  @include section-head;
+  top: 8rem;
+  left: -27rem;
+}
+
+.contact-left {
+  padding-left: 7rem !important;
+  padding-top: 7rem !important;
+
+  p {
+    font-size: 2rem;
+  }
+
+  span.linkedin {
+    color: #0077b5;
+    cursor: pointer;
+  }
+  span.twitter {
+    color: #1da1f2;
+    cursor: pointer;
+  }
+  span.gmail {
+    color: #db4439;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1024px) and (orientation: portrait) {
+  .contact-left {
+    padding: 0px !important;
+  }
+  .contact-icon-container {
+    height: 40px !important;
+    width: 40px !important;
+
+    .icon {
+      font-size: 1.4rem !important;
+    }
+  }
+}
+
+.image-section {
+  min-height: 50vh;
+
+  img {
+    height: auto !important;
+  }
+}
+
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+  .image-section {
+    img {
+      height: auto !important;
+    }
+  }
+  .contact-left {
+    padding: 1rem !important;
+  }
+}
+
+@media only screen and (min-width: 812px) and (max-width: 1023px) and (orientation: landscape) {
+  .contact-left {
+    padding-left: 0px !important;
+    padding-top: 0px !important;
+  }
+  .image-section {
+    img {
+      height: auto !important;
+    }
+  }
+}
