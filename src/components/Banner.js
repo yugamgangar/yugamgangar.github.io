@@ -4,6 +4,7 @@ import { IKImage } from 'imagekitio-react'
 import Typed from 'typed.js'
 
 const Banner = () => {
+
   useEffect(() => {
     new Typed('#typed', {
       strings: ['Tech Geek.^1000', 'Full Stack Engineer.^1000', 'UI/UX Designer.^1000'],
