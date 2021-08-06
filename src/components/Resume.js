@@ -70,7 +70,7 @@ const Resume = () => {
                   </Link>
                 </li>
                 <li>
-                  <Nav.Link href='../assets/resume.pdf' download='resume.pdf' className='download-resume pl-0'>Detailed Resume</Nav.Link>
+                  <Nav.Link href='resume.pdf' download='resume.pdf' className='download-resume pl-0'>Detailed Resume</Nav.Link>
                 </li>
               </ul>
             </nav>
