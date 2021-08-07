@@ -23,7 +23,7 @@ const About = () => {
               psychology, I found my passion in building products.
               </p>
             <p className='text-justify'>
-              🧗🕶 Adventure sports, Outdoor activities, making new friends &amp; solving complex problems is my adrenaline rush.
+              🧗🕶 Adventure sports, Outdoor activities, making new friends &amp; solving complex problems gives me adrenaline rush.
               </p>
 
           </div>
