@@ -10,7 +10,6 @@ import Resume from './components/Resume'
 import Portfolio from './components/Portfolio'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
-import PortfolioDetail from './components/PortfolioDetail'
 import '../src/css/style.scss'
 
 const Index = () => {
@@ -32,7 +31,6 @@ const Index = () => {
           <Contact />
           <Footer />
         </Route>
-        <Route exact path='/project/:id' component={PortfolioDetail} />
       </Router>
     </div>
   )

@@ -20,19 +20,19 @@ const Banner = () => {
     <section className='banner-area d-flex mt-4' name='bannerpage-section'>
       <div className='parallax-background' />
       <div className='container d-flex align-items-center'>
-        <div className='row fullscreen align-items-center justify-content-between' id='trigger'>
-          <div className='col-lg-6 col-md-6 banner-left'>
+        <div className='row fullscreen' id='trigger'>
+          <div className='col-lg-6 col-md-6 col-sm-5 banner-left'>
             <h4>👋 Hey! I am</h4>
             <p className='banner-name'>Yugam Gangar</p>
             <span className='role-text'>I am a <span id='typed' className='font-weight-bold' /></span>
             <p className='mt-4 text-justify'>
-              💞️ Technology and Psychology. <br />
+              ✨ Technology and Psychology. <br />
               👀 Exploring possibilities...
             </p>
           </div>
           <div className="col-lg-1" />
-          <div className='col-lg-5 col-md-6 banner-right'>
-            <IKImage urlEndpoint="https://ik.imagekit.io/6wtwvtg6cyei/" path="contact.jpg" loading="lazy" lquip={{ active: true, quality: 20, blur: 6 }} className="img-fluid" style={{ borderRadius: "12px" }} />
+          <div className='col-lg-5 col-md-6 col-sm-7 banner-right'>
+            <IKImage urlEndpoint="https://ik.imagekit.io/6wtwvtg6cyei/" path="contact.jpg" loading="lazy" lquip={{ active: true, quality: 20, blur: 6 }} className="img-fluid" />
           </div>
         </div>
       </div>

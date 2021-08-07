@@ -25,9 +25,25 @@
 
 .banner-area .fullscreen {
   height: 750px;
+  align-items: center;
+  justify-content: between;
+
+  @media screen and (min-width: 500px) and (max-width: 768px) {
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+  @media screen and (max-width: 412px) {
+    min-height: 750px;
+    height: auto;
+  }
 }
 
 .banner-left {
+  @media (max-width: 412px) {
+    padding: 4rem 2rem;
+  }
+
   .banner-name {
     font-size: 4rem;
   }
@@ -44,8 +60,17 @@
 }
 
 .banner-right {
-  margin-left: auto;
-  margin-right: auto;
+  display: flex;
+  justify-content: center;
+
+  .img-fluid {
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    @media (max-width: 412px) {
+      max-height: 450px;
+      margin-bottom: 14px;
+    }
+  }
 }
 
 @media (max-width: 991px) {

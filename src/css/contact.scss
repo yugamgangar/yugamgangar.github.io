@@ -5,6 +5,10 @@
   padding: 7em 0em 0em 0em !important;
   background: linear-gradient(to bottom right, $primaryBackgroundColorDark, rgba(8, 13, 57, 0.6));
 
+  @media screen and (min-width: 500px) and (max-width: 768px) {
+    min-height: 50vh;
+  }
+
   .contact-lower-container {
     background: linear-gradient(to bottom, $primaryBackgroundColorDark, $secondaryFontColorDark);
     padding: 4rem 0rem 6rem 0rem;

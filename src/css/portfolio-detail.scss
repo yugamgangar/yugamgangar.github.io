@@ -1,8 +1,9 @@
 @import "./variables";
 
 .portfolioDetail-section {
-  background: linear-gradient(to bottom, $primaryBackgroundColorDark, $secondaryFontColorDark);
-  min-height: 100vh;
+  background: radial-gradient($secondaryBackgroundColorDark, rgba($primaryBackgroundColorDark, 0.7));
+  // min-height: 100vh;
+  background-color: $secondaryBackgroundColorDark;
 }
 
 .pfd-body {

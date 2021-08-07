@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react'
-import { Redirect } from 'react-router-dom'
-import '../css/style.scss'
 import '../css/portfolio.scss'
+import PortfolioDetail from './PortfolioDetail'
+import { Modal } from 'react-bootstrap'
 
 const Portfolio = () => {
   const all = useRef(null)
@@ -10,23 +10,7 @@ const Portfolio = () => {
 
   const [projects, setProjects] = useState('all')
   const [data, setData] = useState(null)
-
-  const renderRedirect = data => {
-    if (data !== null) {
-      return <Redirect push to={{
-        pathname: data.path,
-        state: {
-          id: data.id,
-          title: data.title,
-          des: data.des,
-          stack: data.stack,
-          desktop: data.desktop
-        }
-      }}
-      />
-    }
-    else return null
-  }
+  const [show_modal, setModalFlag] = useState(false)
 
   const onCLickHandler = event => {
     switch (event.target.id) {
@@ -41,6 +25,7 @@ const Portfolio = () => {
         stack: 'Stack\'s used: Adobe XD, React Js, Node Js, Express Js, MySQL, Android (Java)',
         desktop: true
       })
+        setModalFlag(true)
         break
       case 'reverberate': setData({
         path: '/project/reverberate',
@@ -50,6 +35,7 @@ const Portfolio = () => {
         stack: 'Stack\'s used: HTML5, CSS3, Bootstrap4, Javascript ES6',
         desktop: true
       })
+        setModalFlag(true)
         break
       case 'insight': setData({
         path: '/project/insight',
@@ -59,6 +45,7 @@ const Portfolio = () => {
         stack: 'Software\'s used: Corel Draw, Adobe Illustrator, Adobe Photoshop',
         desktop: false
       })
+        setModalFlag(true)
         break
       case 'catalog': setData({
         path: '/project/catalog',
@@ -68,6 +55,7 @@ const Portfolio = () => {
         stack: 'Software\'s used: Corel Draw, Adobe Illustrator, Adobe Photoshop',
         desktop: false
       })
+        setModalFlag(true)
         break
       case 'quare': setData({
         path: '/project/quare',
@@ -77,6 +65,7 @@ const Portfolio = () => {
         stack: 'Stack\'s used: Adobe XD, Android (Java), Firebase',
         desktop: false
       })
+        setModalFlag(true)
         break
       case 'poster': setData({
         path: '/project/poster',
@@ -86,6 +75,7 @@ const Portfolio = () => {
         stack: 'Software\'s used: Adobe Photoshop, Adobe Illustrator',
         desktop: false
       })
+        setModalFlag(true)
         break
       case 'procure_infinity': setData({
         path: '/project/procureInfinity',
@@ -95,6 +85,7 @@ const Portfolio = () => {
         stack: 'Stack\'s used: React JS, CSS3, React-Bootstrap',
         desktop: true
       })
+        setModalFlag(true)
         break
       default: break
     }
@@ -212,7 +203,6 @@ const Portfolio = () => {
 
   return (
     <section className='h-100 portfolio-section' name='portfoliopage-section'>
-      {renderRedirect(data)}
       <div className='container'>
         <div className='row'>
           <div className='col-lg-3 col-md-3'>
@@ -229,6 +219,11 @@ const Portfolio = () => {
           </div>
         </div>
       </div>
+
+      <Modal show={show_modal} onHide={() => setModalFlag(false)} centered>
+        <div className="close-btn" onClick={() => setModalFlag(false)}>&#x271a;</div>
+        <PortfolioDetail {...data} />
+      </Modal>
     </section>
   )
 }

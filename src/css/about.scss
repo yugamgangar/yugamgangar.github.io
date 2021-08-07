@@ -17,11 +17,23 @@
   }
 }
 
+#about-trigger > .row {
+  @media screen and (min-width: 500px) and (max-width: 768px) {
+    flex-wrap: nowrap;
+  }
+}
+
 .about-left-div {
   background: linear-gradient(to bottom, #d37e3c, #e4a981);
-  border-radius: 5px;
+  border-top-right-radius: 12px;
+  border-bottom-left-radius: 12px;
   margin-top: 4rem;
-
+  @media (max-width: 412px) {
+    max-height: 450px;
+    img {
+      max-height: 350px;
+    }
+  }
   .about-subject-img {
     bottom: 0px;
     transform: scaleX(-1) !important;
