@@ -89,12 +89,13 @@ const Resume = () => {
                   <ul>
                     <li>
                       <p className='text-left'>
-                        Responsible for building and managing the frontend of main app and all supportive apps from scratch catering ~40k+ new users each year with a team of 4 developers.
+                        Responsible for building and managing the frontend of complete app suite at CareerNinja from scratch catering ~80k+ users with a team of 4 developers.
                     </p>
                     </li>
                     <li>
                       <p className='text-left'>
-                        Experienced a product journey from 0 to 1.
+                        Experienced a product journey from 0 to 1. Built micro-frontend architecture for performance optimization and
+                        increased product usability with UI/UX.
                     </p>
                     </li>
                     <li>
